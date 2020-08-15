@@ -1,45 +1,38 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Multi Select Email Input
 
-In the project directory, you can run:
+## Dependencies 
 
-### `yarn start`
+`npm install json-server -g`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Before run 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+`npm install`
 
-### `yarn test`
+### Run
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+to start the react application one terminal session you can run  `npm start` and in another tab `npm run json-server` this will ran the mocked server to get the data for the component.
 
-### `yarn build`
+## Testing 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I have added some end-to-end test cases using cypress simulating the same behavior as the Figma prototype and some other scenarios you can run those by using:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`npm run cypress`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Storybooks
 
-### `yarn eject`
+I think that to create truly reusable components, you need to experiment with them and track the design so it's good to use storybooks, so I added some stories for certain components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm run storybook`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# changes and improvements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If I had more time I would add or fix:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# multi-email-input
+- It usually starts with a mobile approach first, but since the figma project does not contain the mobile experience I focus on the desktop experience
+- In Suggestion List component there is a fade effect made by a div and with smaller lists the component looks strange and may affect the UX
+- The application respects the requirements but I think that in the part where you select a suggestion on list you should be able to navigate using the keyboard arrows
+- Currently we can add the same email twice, I don't know if this behavior is expected, but I think it should be filtered from the suggestion list
+- When hovering over an email already selected, sometimes, when we have several already selected, the animation to show the "X" to delete the element at times looks strange
+- Unit testing using Jest and (React Testing Library)[https://github.com/testing-library/react-testing-library#readme]

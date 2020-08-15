@@ -26,7 +26,7 @@
     "json-server": "json-server --watch src/db.json --port 3030",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "": "cypress open",
+    "cypres": "cypress open",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
