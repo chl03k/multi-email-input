@@ -35,4 +35,4 @@ If I had more time I would add or fix:
 - The application respects the requirements but I think that in the part where you select a suggestion on list you should be able to navigate using the keyboard arrows
 - Currently we can add the same email twice, I don't know if this behavior is expected, but I think it should be filtered from the suggestion list
 - When hovering over an email already selected, sometimes, when we have several already selected, the animation to show the "X" to delete the element at times looks strange
-- Unit testing using Jest and (React Testing Library)[https://github.com/testing-library/react-testing-library#readme]
+- Unit testing using Jest and [react-testing-library](https://github.com/testing-library/react-testing-library#readme)
