@@ -4,27 +4,30 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Dependencies 
 
-`npm install json-server -g`
+`$ npm install json-server -g`
 
 ### Before run 
 
-`npm install`
+`$ npm install`
 
 ### Run
 
 to start the react application one terminal session you can run  `npm start` and in another tab `npm run json-server` this will ran the mocked server to get the data for the component.
 
+`$ npm start`
+
+
 ## Testing 
 
 I have added some end-to-end test cases using cypress simulating the same behavior as the Figma prototype and some other scenarios you can run those by using:
 
-`npm run cypress`
+`$ npm run cypress`
 
 ## Storybooks
 
 I think that to create truly reusable components, you need to experiment with them and track the design so it's good to use storybooks, so I added some stories for certain components
 
-`npm run storybook`
+`$ npm run storybook`
 
 # changes and improvements
 
