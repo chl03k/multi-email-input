@@ -39,4 +39,5 @@ If I had more time I would add or fix:
 - The application respects the requirements but I think that in the part where you select a suggestion on list you should be able to navigate using the keyboard arrows
 - Currently we can add the same email twice, I don't know if this behavior is expected, but I think it should be filtered from the suggestion list
 - When hovering over an email already selected, sometimes, when we have several already selected, the animation to show the "X" to delete the element at times looks strange
+- I love redux, but I think implementing it for this simple component would have been an overkill, but I think that when applications become more complex the handling of the state is certainly important
 - Unit testing using Jest and [react-testing-library](https://github.com/testing-library/react-testing-library#readme)
