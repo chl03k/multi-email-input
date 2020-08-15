@@ -16,6 +16,7 @@ to start the react application one terminal session you can run  `npm start` and
 
 `$ npm start`
 
+![alt text](chl03k/multi-email-input/edit/master/component.png?raw=true)
 
 ## Testing 
 
