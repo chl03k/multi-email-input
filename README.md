@@ -30,7 +30,7 @@ I think that to create truly reusable components, you need to experiment with th
 
 `$ npm run storybook`
 
-# changes and improvements
+# Changes and improvements
 
 If I had more time I would add or fix:
 
