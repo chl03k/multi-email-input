@@ -12,17 +12,16 @@ interface Props {
 }
 interface State {
   resetValue: Boolean,
-  showAutoComplete: Boolean;
   alreadySelected: string[];
   suggestions: string[];
 }
 
 const MultiSelectInput = ({ options }: Props) => {
+
   const [state, setState] = useState<State>({
     suggestions: [],
     resetValue: false,
-    alreadySelected: [],
-    showAutoComplete: false
+    alreadySelected: []
   });
 
   const { resetValue, suggestions = [], alreadySelected = [] } = state;
@@ -51,7 +50,7 @@ const MultiSelectInput = ({ options }: Props) => {
 
     if (keyCode === 'Escape' || keyCode === 'Esc' || keyCode === 27) {
       setState((prevState: State) =>
-        ({ ...prevState, preshowAutoComplete: false, suggestions: [], resetValue: !prevState.resetValue })
+        ({ ...prevState, suggestions: [], resetValue: !prevState.resetValue })
       );
     }
   }
@@ -69,17 +68,19 @@ const MultiSelectInput = ({ options }: Props) => {
     setState((prevState: State) => ({ ...prevState, alreadySelected: cleanSelection }));
   }
 
-  return (<Container className="multi-select">
-    {alreadySelected.map((email) => (
-      <EmailTag key={shortid.generate()} handleClick={updateSelected}>
-        {email}
-      </EmailTag>
-    ))}
-    <div style={{ position: 'relative' }}>
-      <Input onChange={onChange} onKeyDown={onKeyDown} resetValue={resetValue} />
-      {suggestions.length ? <AutoCompleteList suggestions={suggestions} onSelect={onSelectedSuggestion} /> : null}
-    </div>
-  </Container>)
+  return (
+    <Container className="multi-select">
+      {alreadySelected.map((email) => (
+        <EmailTag key={shortid.generate()} handleClick={updateSelected}>
+          {email}
+        </EmailTag>
+      ))}
+      <div style={{ position: 'relative' }}>
+        <Input onChange={onChange} onKeyDown={onKeyDown} resetValue={resetValue} />
+        {suggestions.length ? <AutoCompleteList suggestions={suggestions} onSelect={onSelectedSuggestion} /> : null}
+      </div>
+    </Container>
+  )
 }
 
 
