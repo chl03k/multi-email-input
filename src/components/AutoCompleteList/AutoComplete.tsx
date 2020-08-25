@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { List, Container, FadeComponent, ListItem } from './styles';
 
 export interface AutoCompleteProps {
@@ -6,7 +6,7 @@ export interface AutoCompleteProps {
   onSelect: any
 }
 
-export const AutoCompleteList = ({ suggestions, onSelect }: AutoCompleteProps): ReactElement => {
+export const AutoCompleteList = ({ suggestions, onSelect }: AutoCompleteProps) => {
   return (
     <Container>
       <List className="suggestions-list">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { EmailTag, Props as EmailTagProps } from './EmailTag';
+import EmailTag, { Props as EmailTagProps } from './EmailTag';
 
 export default {
     title: 'EmailTag',
