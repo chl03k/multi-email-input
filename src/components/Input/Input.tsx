@@ -28,6 +28,7 @@ const Input = ({ onChange, onKeyDown, resetValue }: Props) => {
   useEffect(() => {
     // Clean input if resetValue toggle
     setValue('')
+    setPlaceHolder(true)
   }, [resetValue]);
 
   return (
