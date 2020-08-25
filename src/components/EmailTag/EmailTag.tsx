@@ -27,7 +27,7 @@ const EmailTag = ({ children, handleClick }: Props) => {
   }, [isValid])
 
   return (
-    <Tag valid={isValid} key={shortid.generate()} onClick={() => onClickHandle(children)}>
+    <Tag valid={isValid}  className="email-tag" key={shortid.generate()} onClick={() => onClickHandle(children)}>
       <span>{children} </span> {!isValid ? <img style={{ marginLeft: '5px' }} src={error} alt="error"></img> : null}
     </Tag>
   )
