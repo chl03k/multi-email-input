@@ -40,6 +40,7 @@ const ListItem = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
   width: 100%;
   border-radius: 4px;
   &:first-child {

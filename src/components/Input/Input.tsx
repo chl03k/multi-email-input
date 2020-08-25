@@ -19,7 +19,8 @@ const Input = ({ onChange, onKeyDown, resetValue }: Props) => {
 
   const handleKeyDown = (event: KeyboardEvent, value: string) => {
     const keyCode = event.key || event.keyCode;
-    if (keyCode === 9) {
+    if (keyCode === 9 ||  keyCode === 'Tab') {
+      // Prevent tab behaviour 
       event.preventDefault();
     }
     onKeyDown(keyCode, value)
