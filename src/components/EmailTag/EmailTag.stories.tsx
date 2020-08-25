@@ -1,14 +1,14 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import EmailTag, { Props as EmailTagProps } from './EmailTag';
+import EmailTag from './EmailTag';
 
 export default {
     title: 'EmailTag',
     component: EmailTag,
 } as unknown as Meta;
 
-const Template: Story<EmailTagProps> = (args) => <EmailTag {...args}>{args.children}</EmailTag>;
+const Template: Story<any> = (args) => <EmailTag {...args}>{args.children}</EmailTag>;
 
 export const Valid = Template.bind({});
 

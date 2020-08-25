@@ -6,15 +6,14 @@ import error from '../../icons/error-circle.png';
 
 export interface Props {
   handleClick: (email: string) => void;
-  children: any;
 }
 
-const EmailTag = ({ children, handleClick }: Props) => {
+const EmailTag: React.FC<Props> = (props) => {
 
   const [isValid, setIsValid] = useState(true);
 
   const onClickHandle = (event: any) => {
-    handleClick(event)
+    props.handleClick(event)
   }
 
   const validateEmail = (email: any) => {
@@ -23,12 +22,12 @@ const EmailTag = ({ children, handleClick }: Props) => {
   }
 
   useEffect(() => {
-    setIsValid(validateEmail(children))
-  }, [isValid])
+    setIsValid(validateEmail(props.children))
+  }, [props.children])
 
   return (
-    <Tag valid={isValid}  className="email-tag" key={shortid.generate()} onClick={() => onClickHandle(children)}>
-      <span>{children} </span> {!isValid ? <img style={{ marginLeft: '5px' }} src={error} alt="error"></img> : null}
+    <Tag valid={isValid}  className="email-tag" key={shortid.generate()} onClick={() => onClickHandle(props.children)}>
+      <span>{props.children} </span> {!isValid ? <img style={{ marginLeft: '5px' }} src={error} alt="error"></img> : null}
     </Tag>
   )
 }
